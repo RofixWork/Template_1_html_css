@@ -1,0 +1,377 @@
+/* public style */
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --maincolor : #6195FF;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.text-center{
+    text-align: center;
+}
+.fl-left{
+    float: left;
+}
+.fl-right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.overflow{
+    overflow: hidden;
+}
+/*start header section*/
+.header{
+
+}
+.header .logo{
+    width: 40%;
+    float: left;
+}
+.header .logo img{
+    width: 30%;
+}
+.header  .navbar{
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+.header  .navbar > li{
+    display: inline-block;
+}
+.header .navbar > li > a{
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    padding: 20px 10px;
+    color: #333;
+    font-size: 15px;
+   
+}
+.header  .navbar > li > a.active::after,
+.header  .navbar > li > a::after{
+    content: '';
+    height: 2px;
+    background-color: var(--maincolor);
+    display: block;
+    margin: 2px;
+    transition: width .5s ;
+}
+.header  .navbar > li > a.active::after{
+    width: 100%;
+}
+.header  .navbar > li > a::after{
+    width: 0;
+}
+.header  .navbar > li > a:hover::after{
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    list-style: none;
+    background-color: var(--maincolor);
+    text-align: center;
+    left: -50%;
+    top: 80%;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+.dropdown .dropdown-menu li{
+    width: 120px;
+    height: 30px;
+    display: block;
+    
+}
+.dropdown .dropdown-menu li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    line-height: 30px;
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1; visibility: visible;
+}
+/* start header section */
+header{
+    padding: 80px 0;
+    background-color: #fbfbfb;
+}
+.header-left{
+    float: left;
+
+}
+.header-title{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.header-right{
+    float: right;
+    margin-top: 1%;
+}
+
+.header-right span{
+    text-transform: capitalize;
+}
+.header-right span a{
+    text-decoration: none;
+    color: var(--maincolor);
+    font-style: italic;
+}
+/*info header section*/
+.header-info{
+    padding: 50px 0;
+}
+.info-item-1{
+    width: 80%;
+}
+.info-item-1 img{
+    width: 100%;
+    border-radius: 5px;
+}
+.info-list{
+    list-style: none;
+}
+.info-list li{
+    display: inline-block;
+    margin: 10px;
+    font-size: 14px;
+}
+.info-list li .icon{
+    margin-right: 2px;
+    color: var(--maincolor);
+}
+.info-title-1{
+    margin: 2% 0;
+}
+
+
+.info-desc-1{
+    line-height: 1.8;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 4%;
+    
+}
+.info-list-tags{list-style: none;}
+.info-list-tags li{
+    display: inline-block;
+    margin: 4px 2px;
+    text-transform: capitalize;
+    color: #333;
+    cursor: pointer;
+    font-size: 15px;
+}
+.info-list-tags li:not(.head){
+    background-color: #e8e8e8;
+    padding: 5px 8px;
+}
+.info-list-tags li.head{
+    font-size: 20px;
+    font-weight: bold;
+}
+.info-list-tags li .icon{
+    color:var(--maincolor) ;
+    margin-right: 5px;
+}
+.info-comment{
+    border: 1px solid #e8e8e8;
+    position: relative;
+    padding: 20px 15px;
+    margin: 5% 0;
+}
+.info-comment img{
+    width: 22%;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    border-radius: 0;
+    
+}
+.info-comment-head{
+    padding: 00px 15px 15px 200px;
+}
+.info-comment-title{
+    font-size:24px;
+}
+.info-comment-list {
+    list-style: none;
+    list-style: none;
+    position: absolute;
+    top: 18px;
+    right: 64px;
+    text-align: center;
+}
+.info-comment-list li{
+    display: inline-block;
+    margin-right: 4px;
+    background-color: var(--maincolor);
+    height: 25px;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+}
+.info-comment-list li .icon{
+    line-height: 25px;
+}
+
+.info-comment-dsec{
+    margin-top:4% ;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #888;
+
+}
+.head-comment{
+    margin-bottom: 4%;
+}
+.comment-content{
+    border:  1px solid #e8e8e8;
+    
+    padding:20px 50px 20px 100px;
+    position: relative;
+}
+.comment-content img{
+    width: 10%;
+    border-radius: 0;
+    position: absolute;top: 15px; left: 10px;
+}
+.comment-content-title{
+    float: left;
+    font-size: 20px;
+    
+}
+.comment-content-title span{
+    margin-left: 10px;
+    color: #888;
+    font-size: 16px;
+}
+.comment-content-btn{
+    float: right;
+    margin-right: 20px;
+    background-color: transparent;
+    font-size: 14px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--maincolor);
+    font-weight: bold;
+    cursor: pointer;
+}
+.comment-content-desc{
+    margin-top: 4%;
+    font-size: 15px;
+    line-height: 1.6;
+    color: gray;
+    font-weight: bold;
+}
+.comment-3{
+    border:1px solid #e8e8e8;
+    padding: 10px 20px 10px 90px;
+    position: relative;
+}
+.write-comment{
+    margin: 5% 0;
+}
+
+.write-comment form input[type=text],
+.write-comment form input[type=email]{
+    width: 49%;
+    float: left;
+    margin-bottom: 2%;
+}
+.write-comment form input[type=email]{
+    margin-left: 2%;
+}
+.write-comment form textarea{
+    width: 100%;
+    margin-bottom: 2%;
+}
+.write-comment form input,
+.write-comment form textarea{
+    padding: 6px;
+    border: 0;
+    background-color: #e8e8e8;
+    font-size: 15px;
+}
+.write-comment form input[type=submit]{
+    background-color: var(--maincolor);
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.info-item-2{
+    width: 20%;
+    
+} 
+.info-item-2-content{
+
+    
+    height: 500px;
+    width:90% ;
+    margin: auto;
+}
+.control{
+    position: relative;
+}
+.info-item-2-content input[type=text]{
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 0;
+    background-color: #e8e8e8;
+    
+}
+.info-item-2-content .fa-search{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #6195FF;
+}
+.i-title{
+    margin: 8% 0;
+    text-transform: uppercase;
+}
+.i-title::after{
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #6195FF;
+    display: block;
+    margin-top: 2%;
+}
+.i-list{
+    list-style: none;
+}
+.i-list li{
+    margin-bottom: 6%;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color:gray;
+    padding: 5px 0;
+    cursor: pointer;
+    border-top:1px solid #333 ;
+    transition: color .5s;
+}
+.i-list li:hover{
+    color: #6195FF;
+}
+.i-list li span{
+    display: block;
+    float: right;
+    color: #6195FF;
+}
